@@ -1,9 +1,8 @@
 import { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-
-import BotaoNotificacao from '../botaoNotificacao'
-import './index.css'
+import BotaoNotificacao from '../botaoNotificacao';
+import './index.css';
 
 function SalesCard(){
 
@@ -16,9 +15,11 @@ function SalesCard(){
 
     return(
         <div className="dsmeta-card">
-        <h2 className="dsmeta-sales-title">Vendas</h2>
+        <h2 className="dsmeta-sales-title">Relatório de vendas</h2>
         <div>
           <div className="dsmeta-form-control-container">
+
+          <h3>Data inicial:</h3>
           <DatePicker
             selected={minDate}
             onChange={(date: Date) => {setMinDate(date)}}
@@ -26,6 +27,8 @@ function SalesCard(){
             dateFormat="dd/MM/yyyy"/>
           </div>
           <div className="dsmeta-form-control-container">
+
+          <h3>Data final:</h3>
           <DatePicker
             selected={maxDate}
             onChange={(date: Date) => {setMaxDate(date)}}
@@ -96,4 +99,4 @@ function SalesCard(){
       </div>
     )
 }
-export default SalesCard
+export default SalesCard;
